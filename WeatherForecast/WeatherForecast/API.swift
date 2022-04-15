@@ -37,7 +37,7 @@ class API {
                 }
             }
             catch {
-                  fatalError(error.localizedDescription)
+//                 fatalError(error.localizedDescription)
             }
         }.resume()
     }
@@ -59,7 +59,7 @@ class API {
                 }
             }
             catch {
-                  fatalError(error.localizedDescription)
+//                  fatalError(error.localizedDescription)
             }
         }.resume()
         

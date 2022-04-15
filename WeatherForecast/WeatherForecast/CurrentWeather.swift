@@ -26,9 +26,9 @@ struct CurrentWeather: View  {
                     .font(.system(size: 65))
             }
             HStack{
-          //  Text("\(weather?.weather.last?.description ?? "Unkown")")
-             //   .foregroundColor(.white)
-            //    .font(.body)
+//            Text("\(weather?.weather.last?.description ?? "Unkown")")
+//                .foregroundColor(.white)
+//                .font(.body)
             
             IconView(icon: "humidity", size: .small);
             Text("\(weather?.main.humidity ?? 0)%")
