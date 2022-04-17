@@ -11,15 +11,21 @@ struct CardView: View {
     var list: ListData
 
     var body: some View {
-        VStack (alignment: .center){
+        VStack (alignment: .center, spacing: 10) {
             Text(dayOfTheWeekFromTimestamp(list.dt.timestamp))
-                .font(.title)
+                //.font(.title(size: 65))
                 .foregroundColor(.white)
+                .font(.system(size: 20))
             HStack{
-                Text("\(list.main.humidity)%")
+                IconView(icon: "thermometer", size: .small)
                 Text("\(list.main.temp.round)º")
                     .font(.title)
                     .foregroundColor(.white)
+            }
+            HStack{
+                IconView(icon: "humidity", size: .small)
+                Text("\(list.main.humidity)%")
+                   .foregroundColor(.white)
             }
             IconView (icon: list.weather.last?.icon, size: .large)
             //Text(list.weather.last?.description ?? "Unkown")

@@ -18,6 +18,7 @@ struct ListData: Codable, Identifiable {
     let main: TempObject
     let weather: [WeatherObject]
     let clouds: CloudObject
+
 }
 
 

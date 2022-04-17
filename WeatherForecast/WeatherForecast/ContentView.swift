@@ -19,7 +19,7 @@ struct ContentView: View {
         VStack {
             HStack{
                 
-            TextField("Enter your city", text: $city, onCommit: {
+            TextField("Enter your city".localizated (), text: $city, onCommit: {
                 self.weather.fetch(self.city)
                 self.weeklyWeather.fetch(by: self.city)
             })
@@ -41,9 +41,9 @@ struct ContentView: View {
 
             VStack{
                 Picker("", selection: $selected){
-                    Text("Today")
+                    Text("Today".localizated ())
                         .tag(0)
-                    Text("Week")
+                    Text("Forecast".localizated ())
                         .tag(1)
                 }.pickerStyle(SegmentedPickerStyle()).padding(.horizontal)
             }

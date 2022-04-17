@@ -47,8 +47,8 @@ struct IconView: View {
         "sunrise" : "sunrise.fill",
         "sunset" : "sunset.fill",
         "humidity" : "humidity.fill",
-        "magnifyingglass" : "magnifyingglass.circle" 
-   
+        "magnifyingglass" : "magnifyingglass.circle",
+        "thermometer" : "thermometer.sun.fill"
     ]
     
 }
