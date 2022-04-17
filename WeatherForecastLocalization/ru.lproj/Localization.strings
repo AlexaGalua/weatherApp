@@ -1,0 +1,20 @@
+"Clear" = "Солнечно";
+"Clouds" = "Облачно";
+"Rain" = "Дождь";
+"Snow" = "Снег";
+"Humidity" = "Влажность";
+"Wind speed" = "Скорость ветра";
+"Rain chances" = "Дождь";
+
+"Today" = "Сегодня";
+"Forecast" = "Прогноз";
+"Enter your city" = "Укажите свой город";
+"Humidity" = "Влажность";
+"few clouds" = "незначительная облачность";
+"scattered clouds" = "переменная облачность";
+"broken clouds" = "облачно с прояснениями";
+"overcast clouds" = "пасмурно";
+"clear sky" = "ясно";
+"Minsk" = "Минск";
+"m/s" = "м/с";
+
