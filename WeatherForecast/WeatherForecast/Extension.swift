@@ -2,11 +2,10 @@
 //  Extension.swift
 //  WeatherForecast
 //
-//  Created by 1 on 4/10/22.
+//  Created by A on 4/10/22.
 //
 
 import SwiftUI
-import UIKit
 
 extension Double {
     var round: Int {
@@ -47,7 +46,7 @@ extension Date {
     }
 
     var day: String {
-        let dateFormatter = DateFormatter(dateFormat: "MMM d h:mm")
+        let dateFormatter = DateFormatter(dateFormat: "MMM d h:mm a")
         return dateFormatter.string(from: self)
     }
 }
@@ -56,9 +55,6 @@ func dayOfTheWeekFromTimestamp(_ timestamp: TimeInterval) -> String {
     let date = Date.dateFromUnixTimestamp(timestamp)
     return date.day
 }
-
-
-
 
 
 

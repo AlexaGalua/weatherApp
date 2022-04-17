@@ -2,7 +2,7 @@
 //  WeeklyWeather.swift
 //  WeatherForecast
 //
-//  Created by 1 on 4/10/22.
+//  Created by A on 4/10/22.
 //
 
 import Foundation
@@ -18,7 +18,6 @@ struct ListData: Codable, Identifiable {
     let main: TempObject
     let weather: [WeatherObject]
     let clouds: CloudObject
-
 }
 
 

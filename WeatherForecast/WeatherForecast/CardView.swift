@@ -2,7 +2,7 @@
 //  CardView.swift
 //  WeatherForecast
 //
-//  Created by 1 on 4/10/22.
+//  Created by A on 4/10/22.
 //
 
 import SwiftUI
@@ -11,21 +11,15 @@ struct CardView: View {
     var list: ListData
 
     var body: some View {
-        VStack (alignment: .center, spacing: 10) {
+        VStack (alignment: .center){
             Text(dayOfTheWeekFromTimestamp(list.dt.timestamp))
-                //.font(.title(size: 65))
+                .font(.title)
                 .foregroundColor(.white)
-                .font(.system(size: 20))
             HStack{
-                IconView(icon: "thermometer", size: .small)
+                Text("\(list.main.humidity)%")
                 Text("\(list.main.temp.round)º")
                     .font(.title)
                     .foregroundColor(.white)
-            }
-            HStack{
-                IconView(icon: "humidity", size: .small)
-                Text("\(list.main.humidity)%")
-                   .foregroundColor(.white)
             }
             IconView (icon: list.weather.last?.icon, size: .large)
             //Text(list.weather.last?.description ?? "Unkown")

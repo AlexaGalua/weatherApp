@@ -2,7 +2,7 @@
 //  CurrentWeather.swift
 //  WeatherForecast
 //
-//  Created by 1 on 4/10/22.
+//  Created by A on 4/10/22.
 //
 
 import SwiftUI
@@ -14,7 +14,7 @@ struct CurrentWeather: View  {
        
     var body: some View {
         VStack (alignment: .center, spacing: 20) {
-            Text("\(weather?.name ?? "Unkown")".localizated ())
+            Text("\(weather?.name ?? "Unkown")")
             .font(.title)
             .foregroundColor(.white)
             .bold()
@@ -26,24 +26,16 @@ struct CurrentWeather: View  {
                     .font(.system(size: 65))
             }
             HStack{
-             
-            Text("\(weather?.weather.last?.description ?? "Unknown")".localizated ())
-            .foregroundColor(.white)
-              .font(.body)
-            }
-            HStack{
+//            Text("\(weather?.weather.last?.description ?? "Unkown")")
+//                .foregroundColor(.white)
+//                .font(.body)
+            
             IconView(icon: "humidity", size: .small);
-            Text("\(weather?.main.humidity ?? 0) %")
+            Text("\(weather?.main.humidity ?? 0)%")
                 .foregroundColor(.white)
                 .font(.body)
             }
-            HStack{
-          
-            IconView(icon: "wind", size: .small);
-            Text("\(weather?.wind.speed ?? 0) m/s" .localizated ())
-                .foregroundColor(.white)
-                .font(.body)
-            }
+            
         }.frame(width: UIScreen.main.bounds.width, height: height)
         .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .topLeading, endPoint: .bottomTrailing))
     }

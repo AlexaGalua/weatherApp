@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  WeatherForecast
 //
-//  Created by 1 on 4/9/22.
+//  Created by A on 4/9/22.
 //
 
 import SwiftUI
@@ -19,7 +19,7 @@ struct ContentView: View {
         VStack {
             HStack{
                 
-            TextField("Enter your city".localizated (), text: $city, onCommit: {
+            TextField("Enter your city", text: $city, onCommit: {
                 self.weather.fetch(self.city)
                 self.weeklyWeather.fetch(by: self.city)
             })
@@ -41,9 +41,9 @@ struct ContentView: View {
 
             VStack{
                 Picker("", selection: $selected){
-                    Text("Today".localizated ())
+                    Text("Today")
                         .tag(0)
-                    Text("Forecast".localizated ())
+                    Text("Week")
                         .tag(1)
                 }.pickerStyle(SegmentedPickerStyle()).padding(.horizontal)
             }

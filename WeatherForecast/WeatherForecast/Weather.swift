@@ -2,7 +2,7 @@
 //  Weather.swift
 //  WeatherForecast
 //
-//  Created by 1 on 4/9/22.
+//  Created by A on 4/9/22.
 //
 
 import Foundation
@@ -15,7 +15,6 @@ struct Weather: Codable {
     let main: Main
     let clouds: Clouds
     let sys: Sys
-    let wind: Wind
 }
 
 struct Coord: Codable {
@@ -35,9 +34,7 @@ struct Main: Codable {
 struct Clouds: Codable {
     let all: Double
 }
-struct Wind: Codable {
-    let speed: Double
-}
+
 struct Sys: Codable {
     let type: Int
     let id: Int

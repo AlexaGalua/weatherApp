@@ -2,7 +2,7 @@
 //  API.swift
 //  WeatherForecast
 //
-//  Created by 1 on 4/9/22.
+//  Created by A on 4/9/22.
 //
 
 import Foundation
@@ -10,6 +10,7 @@ import Foundation
 private let baseUrlforCurrentWeather = URL(string: "https://api.openweathermap.org/data/2.5/weather")!
 private let appid = "e56577d8f032bc31ab1e10d0bb3f513e"
 private let baseUrlForWeeklyWeather = URL(string: "https://api.openweathermap.org/data/2.5/forecast")!
+private let imageURLFormat = "https://openweathermap.org/img/wn/%@@2x.png"
 private var decoder: JSONDecoder {
     let decode = JSONDecoder()
     decode.keyDecodingStrategy = .convertFromSnakeCase
@@ -36,7 +37,7 @@ class API {
                 }
             }
             catch {
-//                  fatalError(error.localizedDescription)
+//                 fatalError(error.localizedDescription)
             }
         }.resume()
     }
@@ -58,10 +59,23 @@ class API {
                 }
             }
             catch {
-                  fatalError(error.localizedDescription)
+//                  fatalError(error.localizedDescription)
             }
         }.resume()
         
         
+    }
+    func downloadImage(with name: String, completion: @escaping (UIImage?) -> Void) {
+        guard let url = URL(string: String(format: imageURLFormat, name)) else {
+            completion(nil)
+            return
+        }
+        URLSession.shared.dataTask(with: url) { data, _, _ in
+            if let data = data {
+                completion(UIImage(data: data))
+            } else {
+                completion(nil)
+            }
+        }.resume()
     }
 }
