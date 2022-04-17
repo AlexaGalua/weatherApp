@@ -14,7 +14,7 @@ struct CurrentWeather: View  {
        
     var body: some View {
         VStack (alignment: .center, spacing: 20) {
-            Text("\(weather?.name ?? "Unkown")")
+            Text("\(weather?.name ?? "Unkown")".localizated ())
             .font(.title)
             .foregroundColor(.white)
             .bold()
@@ -26,16 +26,24 @@ struct CurrentWeather: View  {
                     .font(.system(size: 65))
             }
             HStack{
-//            Text("\(weather?.weather.last?.description ?? "Unkown")")
-//                .foregroundColor(.white)
-//                .font(.body)
-            
+             
+            Text("\(weather?.weather.last?.description ?? "Unknown")".localizated ())
+            .foregroundColor(.white)
+              .font(.body)
+            }
+            HStack{
             IconView(icon: "humidity", size: .small);
-            Text("\(weather?.main.humidity ?? 0)%")
+            Text("\(weather?.main.humidity ?? 0) %")
                 .foregroundColor(.white)
                 .font(.body)
             }
-            
+            HStack{
+          
+            IconView(icon: "wind", size: .small);
+            Text("\(weather?.wind.speed ?? 0) m/s" .localizated ())
+                .foregroundColor(.white)
+                .font(.body)
+            }
         }.frame(width: UIScreen.main.bounds.width, height: height)
         .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .topLeading, endPoint: .bottomTrailing))
     }

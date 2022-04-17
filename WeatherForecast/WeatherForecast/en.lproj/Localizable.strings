@@ -1,0 +1,16 @@
+/* 
+  Localizabl.strings
+  WeatherForecast
+
+  Created by Space on 4/12/22.
+  
+*/
+
+
+"Clear" = "Солнечно";
+"weather?.weather.last?.description" = "Clouds";
+"Rain" = "Дождь";
+"Snow" = "Снег";
+"Humidity" = "Влажность";
+"Wind speed" = "Ветер";
+"Rain chances" = "Дождь";

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 extension Double {
     var round: Int {
@@ -46,7 +47,7 @@ extension Date {
     }
 
     var day: String {
-        let dateFormatter = DateFormatter(dateFormat: "MMM d h:mm a")
+        let dateFormatter = DateFormatter(dateFormat: "MMM d h:mm")
         return dateFormatter.string(from: self)
     }
 }
@@ -55,6 +56,9 @@ func dayOfTheWeekFromTimestamp(_ timestamp: TimeInterval) -> String {
     let date = Date.dateFromUnixTimestamp(timestamp)
     return date.day
 }
+
+
+
 
 
 

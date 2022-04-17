@@ -15,6 +15,7 @@ struct Weather: Codable {
     let main: Main
     let clouds: Clouds
     let sys: Sys
+    let wind: Wind
 }
 
 struct Coord: Codable {
@@ -34,7 +35,9 @@ struct Main: Codable {
 struct Clouds: Codable {
     let all: Double
 }
-
+struct Wind: Codable {
+    let speed: Double
+}
 struct Sys: Codable {
     let type: Int
     let id: Int

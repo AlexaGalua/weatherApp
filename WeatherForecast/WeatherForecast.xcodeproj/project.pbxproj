@@ -21,6 +21,8 @@
 		632C12242802C92F000C5BF9 /* WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C12232802C92F000C5BF9 /* WeeklyWeatherView.swift */; };
 		632C12282802C973000C5BF9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C12272802C973000C5BF9 /* CardView.swift */; };
 		632C122F2802D2C5000C5BF9 /* WeatherForecastApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C122E2802D2C5000C5BF9 /* WeatherForecastApp.swift */; };
+		B2D4D3D72805AE9400550480 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4D3D62805AE9400550480 /* Localization.swift */; };
+		B2D4D3DA2805B0FE00550480 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2D4D3DC2805B0FE00550480 /* Localization.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,9 @@
 		632C12232802C92F000C5BF9 /* WeeklyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherView.swift; sourceTree = "<group>"; };
 		632C12272802C973000C5BF9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		632C122E2802D2C5000C5BF9 /* WeatherForecastApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastApp.swift; sourceTree = "<group>"; };
+		B2D4D3D62805AE9400550480 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		B2D4D3DB2805B0FE00550480 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localization.strings; sourceTree = "<group>"; };
+		B2D4D3FF2805FB2B00550480 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 		632C11F02801F8BA000C5BF9 = {
 			isa = PBXGroup;
 			children = (
+				B2D4D3DC2805B0FE00550480 /* Localization.strings */,
 				632C11FB2801F8BB000C5BF9 /* WeatherForecast */,
 				632C11FA2801F8BB000C5BF9 /* Products */,
 			);
@@ -87,6 +93,7 @@
 				632C12002801F8C3000C5BF9 /* Assets.xcassets */,
 				632C12022801F8C3000C5BF9 /* Preview Content */,
 				0084EF0E2805441B000E752B /* IconView.swift */,
+				B2D4D3D62805AE9400550480 /* Localization.swift */,
 			);
 			path = WeatherForecast;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 632C11F02801F8BA000C5BF9;
 			productRefGroup = 632C11FA2801F8BB000C5BF9 /* Products */;
@@ -157,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				632C12042801F8C3000C5BF9 /* Preview Assets.xcassets in Resources */,
+				B2D4D3DA2805B0FE00550480 /* Localization.strings in Resources */,
 				632C12012801F8C3000C5BF9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +182,7 @@
 				632C122F2802D2C5000C5BF9 /* WeatherForecastApp.swift in Sources */,
 				632C121328022F6B000C5BF9 /* CurrentWeatherViewModel.swift in Sources */,
 				632C121B2802C823000C5BF9 /* Extension.swift in Sources */,
+				B2D4D3D72805AE9400550480 /* Localization.swift in Sources */,
 				632C12212802C902000C5BF9 /* WeeklyWeatherViewModel.swift in Sources */,
 				632C120D2801F903000C5BF9 /* Weather.swift in Sources */,
 				632C12242802C92F000C5BF9 /* WeeklyWeatherView.swift in Sources */,
@@ -185,11 +195,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		B2D4D3DC2805B0FE00550480 /* Localization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2D4D3DB2805B0FE00550480 /* ru */,
+				B2D4D3FF2805FB2B00550480 /* en */,
+			);
+			name = Localization.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		632C12062801F8C3000C5BF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -251,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -320,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.goodpeople.app.WeatherForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -342,7 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.goodpeople.app.WeatherForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
