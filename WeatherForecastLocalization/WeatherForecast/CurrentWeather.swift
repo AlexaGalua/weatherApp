@@ -40,7 +40,7 @@ struct CurrentWeather: View  {
             HStack{
           
             IconView(icon: "wind", size: .small);
-            Text("\(weather?.wind.speed ?? 0) m/s".localizated ())
+                Text("\(weather?.wind.speed ?? 0)" + " m/s".localizated ())
                 .foregroundColor(.white)
                 .font(.body)
             }
