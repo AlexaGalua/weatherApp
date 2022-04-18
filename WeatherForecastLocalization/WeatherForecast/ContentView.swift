@@ -26,7 +26,8 @@ struct ContentView: View {
             }
                 .pickerStyle(SegmentedPickerStyle())
               .padding(.horizontal)
-              .frame(width: 375, height: 20)
+              
+//              .frame(width: 375, height: 20)
                             .padding()
                             .overlay(RoundedRectangle(cornerRadius: 20).strokeBorder(Color.blue, style: StrokeStyle(lineWidth: 2.0)))
                             .foregroundColor(.green)

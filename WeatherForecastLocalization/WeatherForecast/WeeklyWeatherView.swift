@@ -11,7 +11,7 @@ struct WeeklyWeatherView: View {
     var listData: [ListData] = []
     var value: Int = 0
     var height: CGFloat = 0
-    var width = UIScreen.main.bounds.width / 4
+    var width = UIScreen.main.bounds.width / 3
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
