@@ -14,13 +14,12 @@ struct IconView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var icon: String?
-    let size: iconSize
+    let size: IconSize
     
     var body: some View {
         Image(systemName: weatherIcons[icon ?? "loading"] ?? "goforward")
             .font(size == .large ? .largeTitle : .body)
             .foregroundColor(Color.white)
-            
     }
     
     let weatherIcons = [
@@ -54,7 +53,7 @@ struct IconView: View {
 }
 
 extension IconView {
-    enum iconSize {
+    enum IconSize {
         case small
         case large
     }

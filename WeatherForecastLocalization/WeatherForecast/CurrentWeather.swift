@@ -45,6 +45,6 @@ struct CurrentWeather: View  {
                 .font(.body)
             }
         }.frame(width: UIScreen.main.bounds.width, height: height)
-        .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.green]), startPoint: .topLeading, endPoint: .bottomTrailing))
     }
 }

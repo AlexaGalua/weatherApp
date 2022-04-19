@@ -28,13 +28,13 @@ struct ContentView: View {
               .padding(.horizontal)
 //              .frame(width: 375, height: 20)
                             .padding()
-                            .overlay(RoundedRectangle(cornerRadius: 20).strokeBorder(Color.blue, style: StrokeStyle(lineWidth: 2.0)))
+                            .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.blue, style: StrokeStyle(lineWidth: 2.0)))
                             .foregroundColor(.green)
             
             GeometryReader{ gr in
                 CurrentWeather(weather: self.weather.current, height: self.selected == 0 ? gr.size.height : gr.size.height * 1)
                     .animation(.easeInOut(duration: 0.5))
-                    .cornerRadius(20)
+                    .cornerRadius(10)
             }
 
             WeeklyWeatherView(listData: weeklyWeather.weather?.list ?? [], value: selected, height: height * 0.5)

@@ -46,7 +46,6 @@ struct CardViewModifier: ViewModifier {
         content
             .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.yellow]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .cornerRadius(20)
-            
     }
 
     private var day: String {
