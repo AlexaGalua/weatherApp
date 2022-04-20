@@ -13,7 +13,6 @@ final class CurrentWeatherViewModel: ObservableObject {
     
     init() {
         self.fetch()
-        
     }
 }
 

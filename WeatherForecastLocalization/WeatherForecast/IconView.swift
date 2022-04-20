@@ -11,7 +11,7 @@ import Combine
 
 struct IconView: View {
     
-    @Environment(\.colorScheme) var colorScheme
+//    @Environment(\.colorScheme) var colorScheme
     
     var icon: String?
     let size: IconSize

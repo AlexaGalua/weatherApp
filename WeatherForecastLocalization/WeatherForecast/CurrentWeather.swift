@@ -9,27 +9,26 @@ import SwiftUI
 
 struct CurrentWeather: View  {
     var weather: Weather?
-
-    var height: CGFloat = 0
+    var width = UIScreen.main.bounds.width
+    var height = UIScreen.main.bounds.height
        
     var body: some View {
         VStack (alignment: .center, spacing: 20) {
             Text("\(weather?.name ?? "Unkown")".localizated ())
-            .font(.title)
-            .foregroundColor(.white)
-            .bold()
+                .font(.title)
+                .foregroundColor(.white)
+                .bold()
             IconView (icon: weather?.weather.last?.icon, size: .large)
             HStack{
-                Text("\(weather?.main.temp.round ?? 0)ºC")
-                    .foregroundColor(.white)
-                    .fontWeight(Font.Weight.heavy)
-                    .font(.system(size: 65))
+            Text("\(weather?.main.temp.round ?? 0)ºC")
+                .foregroundColor(.white)
+                .fontWeight(Font.Weight.heavy)
+                .font(.system(size: 65))
             }
             HStack{
-             
             Text("\(weather?.weather.last?.description ?? "Unknown")".localizated ())
-            .foregroundColor(.white)
-              .font(.body)
+                .foregroundColor(.white)
+                .font(.body)
             }
             HStack{
             IconView(icon: "humidity", size: .small);
@@ -38,13 +37,12 @@ struct CurrentWeather: View  {
                 .font(.body)
             }
             HStack{
-          
             IconView(icon: "wind", size: .small);
-                Text("\(weather?.wind.speed ?? 0)" + " m/s".localizated ())
+            Text("\(weather?.wind.speed ?? 0)" + " m/s".localizated ())
                 .foregroundColor(.white)
                 .font(.body)
             }
-        }.frame(width: UIScreen.main.bounds.width, height: height)
-        .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.green]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        }.frame(width: width, height: height)
+         .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.green]), startPoint: .topLeading, endPoint: .bottomTrailing))
     }
 }

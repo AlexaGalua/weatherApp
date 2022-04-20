@@ -24,6 +24,6 @@ struct WeeklyWeatherView: View {
                 }
             }
         }.padding(20)
-        .frame(height: self.value == 0 ? 0 : self.height * 0.65).animation(.easeInOut(duration: 0.5))
+         .frame(height: self.value == 0 ? 0 : self.height * 0.65).animation(.easeInOut(duration: 0.5))
     }
 }

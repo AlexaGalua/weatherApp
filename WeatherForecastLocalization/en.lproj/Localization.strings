@@ -15,11 +15,15 @@
 "broken clouds" = "broken clouds";
 "overcast clouds" = "overcast clouds";
 "clear sky" = "clear sky";
+"light rain" = "light rain";
+"dust" = "dust";
+"rain" = "rain";
 "Minsk" = "Minsk";
 "Vitebsk" = "Vitebsk";
 "Hrodna" = "Hrodna";
 "Warsaw" = "Warsaw";
 "Kyiv" = "Kyiv";
+"Delhi" = "Delhi";
 " m/s" = " m/s";
 
 
