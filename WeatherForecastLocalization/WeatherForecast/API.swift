@@ -16,9 +16,9 @@ private var decoder: JSONDecoder {
     return decode
 }
 
-//import SwiftUI
-
 class API {
+    
+
     class func fetchCurrentWeather(by city: String, onSuccess: @escaping (Weather) -> Void ){
         let query = ["q": "\(city)", "appid": appid, "units": "metric"]
 
