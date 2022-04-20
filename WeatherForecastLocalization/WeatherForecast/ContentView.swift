@@ -18,27 +18,22 @@ struct ContentView: View {
     var body: some View{
         VStack {
             HStack{
-                
             TextField("Enter your city".localizated (), text: $city, onCommit: {
                 self.weather.fetch(self.city)
                 self.weeklyWeather.fetch(by: self.city)
             })
             }
-                .pickerStyle(SegmentedPickerStyle())
+              .pickerStyle(SegmentedPickerStyle())
               .padding(.horizontal)
-//              .frame(width: 375, height: 20)
-                            .padding()
-                            .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.blue, style: StrokeStyle(lineWidth: 2.0)))
-                            .foregroundColor(.green)
-            
+              .padding()
+              .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.blue, style: StrokeStyle(lineWidth: 2.0)))
+              .foregroundColor(.green)
             GeometryReader{ gr in
-                CurrentWeather(weather: self.weather.current, height: self.selected == 0 ? gr.size.height : gr.size.height * 1)
+                CurrentWeather(weather: self.weather.current, height: self.selected == 0 ? gr.size.height: gr.size.height)
                     .animation(.easeInOut(duration: 0.5))
                     .cornerRadius(10)
             }
-
             WeeklyWeatherView(listData: weeklyWeather.weather?.list ?? [], value: selected, height: height * 0.5)
-
             VStack{
                 Picker("", selection: $selected){
                     Text("Today".localizated ())

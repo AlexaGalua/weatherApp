@@ -16,12 +16,11 @@ private var decoder: JSONDecoder {
     return decode
 }
 
-//import SwiftUI
-
 class API {
+    
+
     class func fetchCurrentWeather(by city: String, onSuccess: @escaping (Weather) -> Void ){
         let query = ["q": "\(city)", "appid": appid, "units": "metric"]
-
         guard let url = baseUrlforCurrentWeather.withQueries(query) else {
             fatalError()
         }
@@ -43,14 +42,12 @@ class API {
 
     class func weeklyWeather(_ city: String, onSuccess: @escaping (WeeklyWeather) -> Void) {
         let query = ["q": "\(city)", "appid": appid, "units": "metric", "cnt": "15"]
-        guard baseUrlForWeeklyWeather.withQueries(query) != nil else { fatalError("Invalid URL for weekly weather")}
         guard let url = baseUrlForWeeklyWeather.withQueries(query) else { fatalError() }
 
         URLSession.shared.dataTask(with: url) { data, res, err in
             guard let data = data, err == nil else {
                 fatalError(err!.localizedDescription)
             }
-
             do {
                 let weather = try decoder.decode(WeeklyWeather.self, from:data)
                 DispatchQueue.main.async {

@@ -13,7 +13,6 @@ struct CardView: View {
     var body: some View {
         VStack (alignment: .center, spacing: 10) {
             Text(dayOfTheWeekFromTimestamp(list.dt.timestamp))
-                //.font(.title(size: 65))
                 .foregroundColor(.white)
                 .font(.system(size: 20))
             HStack{
@@ -28,9 +27,6 @@ struct CardView: View {
                    .foregroundColor(.white)
             }
             IconView (icon: list.weather.last?.icon, size: .large)
-            //Text(list.weather.last?.description ?? "Unkown")
-                .font(.body)
-                .foregroundColor(.white)
         }
     }
 }
