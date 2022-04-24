@@ -1,11 +1,4 @@
 
-"Clear" = "Солнечно";
-"Clouds" = "Облачно";
-"Rain" = "Дождь";
-"Snow" = "Снег";
-"Humidity" = "Влажность";
-"Wind speed" = "Скорость ветра";
-"Rain chances" = "Дождь";
 
 "Today" = "Сегодня";
 "Forecast" = "Прогноз";
@@ -19,11 +12,13 @@
 "light rain" = "мелкий дождь";
 "dust" = "пыль";
 "rain" = "дождь";
+"light intensity drizzele" = "моросящий дождь";
 "Minsk" = "Минск";
 "Vitebsk" = "Витебск";
 "Hrodna" = "Гродно";
 "Warsaw" = "Варшава";
 "Kyiv" = "Киев";
+"Bucharest" = "Бухарест";
 "Delhi" = "Дели";
-" m/s" = " м/с";
+"m/s" = "м/с";
 

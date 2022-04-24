@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0084EF0F2805441B000E752B /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0084EF0E2805441B000E752B /* IconView.swift */; };
-		00DC02D4280FF5BA000B7208 /* IconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC02D3280FF5BA000B7208 /* IconViewModel.swift */; };
 		632C11FF2801F8BB000C5BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C11FE2801F8BB000C5BF9 /* ContentView.swift */; };
 		632C12012801F8C3000C5BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632C12002801F8C3000C5BF9 /* Assets.xcassets */; };
 		632C12042801F8C3000C5BF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632C12032801F8C3000C5BF9 /* Preview Assets.xcassets */; };
@@ -28,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		0084EF0E2805441B000E752B /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
-		00DC02D3280FF5BA000B7208 /* IconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconViewModel.swift; sourceTree = "<group>"; };
 		632C11F92801F8BB000C5BF9 /* WeatherForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632C11FE2801F8BB000C5BF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		632C12002801F8C3000C5BF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				632C12002801F8C3000C5BF9 /* Assets.xcassets */,
 				632C12022801F8C3000C5BF9 /* Preview Content */,
 				0084EF0E2805441B000E752B /* IconView.swift */,
-				00DC02D3280FF5BA000B7208 /* IconViewModel.swift */,
 				B2D4D3D62805AE9400550480 /* Localization.swift */,
 			);
 			path = WeatherForecast;
@@ -187,7 +184,6 @@
 				632C121B2802C823000C5BF9 /* Extension.swift in Sources */,
 				B2D4D3D72805AE9400550480 /* Localization.swift in Sources */,
 				632C12212802C902000C5BF9 /* WeeklyWeatherViewModel.swift in Sources */,
-				00DC02D4280FF5BA000B7208 /* IconViewModel.swift in Sources */,
 				632C120D2801F903000C5BF9 /* Weather.swift in Sources */,
 				632C12242802C92F000C5BF9 /* WeeklyWeatherView.swift in Sources */,
 				632C1210280226E4000C5BF9 /* API.swift in Sources */,

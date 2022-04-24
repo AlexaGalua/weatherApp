@@ -2,7 +2,7 @@
 //  CardView.swift
 //  WeatherForecast
 //
-//  Created by A on 4/10/22.
+//  Created by А on 4/10/22.
 //
 
 import SwiftUI
@@ -11,40 +11,30 @@ struct CardView: View {
     var list: ListData
 
     var body: some View {
-        VStack (alignment: .center, spacing: 10) {
+        VStack (spacing: 5) {
             Text(dayOfTheWeekFromTimestamp(list.dt.timestamp))
-                .foregroundColor(.white)
-                .font(.system(size: 20))
+                .foregroundColor(.black)
+                .font(.system(size: 15))
+            Spacer()
+            IconView (icon: list.weather.last?.icon)
+                .font(.system(size: 20, weight: .ultraLight))
+                .font(.body)
+                .foregroundColor(.black)
             HStack{
-                IconView(icon: "thermometer", size: .small)
+                IconView(icon: "thermometer")
+                    .font(.system(size: 16, weight: .ultraLight))
                 Text("\(list.main.temp.round)º")
                     .font(.title)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }
             HStack{
-                IconView(icon: "humidity", size: .small)
+                IconView(icon: "humidity")
+                    .font(.system(size: 16, weight: .ultraLight))
                 Text("\(list.main.humidity)%")
-                   .foregroundColor(.white)
+                   .foregroundColor(.black)
             }
-            IconView (icon: list.weather.last?.icon, size: .large)
+            .padding([.leading, .trailing])
         }
     }
 }
 
-struct CardViewModifier: ViewModifier {
-    var timestamp: TimeInterval
-
-    init(_ timestamp: TimeInterval) {
-        self.timestamp = timestamp
-    }
-
-    func body(content: Content) -> some View {
-        content
-            .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.yellow]), startPoint: .topLeading, endPoint: .bottomTrailing))
-            .cornerRadius(20)
-    }
-
-    private var day: String {
-        return dayOfTheWeekFromTimestamp(self.timestamp)
-    }
-}

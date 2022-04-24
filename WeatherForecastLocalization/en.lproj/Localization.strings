@@ -1,10 +1,4 @@
 
-"Clear" = "Clear";
-"Clouds" = "Clouds";
-"Rain" = "Rain";
-"Snow" = "Snow";
-"Wind speed" = "Wind speed";
-"Rain chances" = "Rain chances";
 
 "Today" = "Today";
 "Forecast" = "Forecast";
@@ -18,13 +12,15 @@
 "light rain" = "light rain";
 "dust" = "dust";
 "rain" = "rain";
+"light intensity drizzele" = "light intensity drizzele";
 "Minsk" = "Minsk";
 "Vitebsk" = "Vitebsk";
 "Hrodna" = "Hrodna";
 "Warsaw" = "Warsaw";
 "Kyiv" = "Kyiv";
+"Bucharest" = "Bucharest";
 "Delhi" = "Delhi";
-" m/s" = " m/s";
+"m/s" = "m/s";
 
 
 

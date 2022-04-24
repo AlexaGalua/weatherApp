@@ -2,7 +2,7 @@
 //  Localization.swift
 //  WeatherForecast
 //
-//  Created by A on 4/12/22.
+//  Created by А on 4/12/22.
 //
 
 import SwiftUI

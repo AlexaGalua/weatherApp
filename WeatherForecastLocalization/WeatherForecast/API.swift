@@ -2,7 +2,7 @@
 //  API.swift
 //  WeatherForecast
 //
-//  Created by A on 4/9/22.
+//  Created by А on 4/9/22.
 //
 
 import Foundation
@@ -16,25 +16,20 @@ private var decoder: JSONDecoder {
     return decode
 }
 
-class API {
-    
+import SwiftUI
 
+class API {
     class func fetchCurrentWeather(by city: String, onSuccess: @escaping (Weather) -> Void ){
         let query = ["q": "\(city)", "appid": appid, "units": "metric"]
-        guard let url = baseUrlforCurrentWeather.withQueries(query) else {
-            fatalError()
-        }
+        guard let url = baseUrlforCurrentWeather.withQueries(query) else { fatalError() }
         URLSession.shared.dataTask(with: url) { (data, res, err) in
-            guard let data = data, err == nil else {
-                fatalError(err!.localizedDescription)
-            }
+            guard let data = data, err == nil else { fatalError(err!.localizedDescription) }
             do {
                 let weather = try decoder.decode(Weather.self, from: data)
                 DispatchQueue.main.async {
                     onSuccess(weather)
                 }
-            }
-            catch {
+            } catch {
                   fatalError(error.localizedDescription)
             }
         }.resume()
@@ -43,7 +38,6 @@ class API {
     class func weeklyWeather(_ city: String, onSuccess: @escaping (WeeklyWeather) -> Void) {
         let query = ["q": "\(city)", "appid": appid, "units": "metric", "cnt": "15"]
         guard let url = baseUrlForWeeklyWeather.withQueries(query) else { fatalError() }
-
         URLSession.shared.dataTask(with: url) { data, res, err in
             guard let data = data, err == nil else {
                 fatalError(err!.localizedDescription)
@@ -53,12 +47,9 @@ class API {
                 DispatchQueue.main.async {
                     onSuccess(weather)
                 }
-            }
-            catch {
+            } catch {
                   fatalError(error.localizedDescription)
             }
         }.resume()
-        
-        
     }
 }
